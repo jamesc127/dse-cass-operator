@@ -12,10 +12,12 @@ kind: CassandraDatacenter
 metadata:
   name: dc1
 spec:
-  clusterName: cdc-test
+  clusterName: dse-gke-cluster
   serverType: dse
-  serverVersion: "6.8.17"
-  serverImage: "jamesc127/dse-server:6.8.17"
+  serverVersion: "6.8.19"
+  dseWorkloads:
+    searchEnabled: true
+    graphEnabled: true
   managementApiAuth:
     insecure: {}
   size: 3
@@ -41,7 +43,6 @@ spec:
       authenticator: com.datastax.bdp.cassandra.auth.DseAuthenticator
       authorizer: com.datastax.bdp.cassandra.auth.DseAuthorizer
       role_manager: com.datastax.bdp.cassandra.auth.DseRoleManager
-      cdc_enabled: true
     dse-yaml:
       authorization_options:
         enabled: true
@@ -54,4 +55,3 @@ spec:
       additional-jvm-opts:
         - "-Ddse.system_distributed_replication_dc_names=dc1"
         - "-Ddse.system_distributed_replication_per_dc=3"
-        - "-javaagent:/agent-dse4-luna-1.0.0-all.jar=pulsarServiceUrl=pulsar://pulsar-broker.default.svc.cluster.local:6650,cdcWorkingDir=/var/lib/cassandra/cdc,pulsarBatchDelayInMs=100"
