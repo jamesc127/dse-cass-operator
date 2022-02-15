@@ -1,7 +1,6 @@
-# DataStax Enterprise & Luna Streaming CDC Demo
+# DataStax Enterprise Cass-Operator Deployment on GKE
 ## TL;DR
-- This demo is intended to illustrate [CDC for Apache Cassandra](https://www.datastax.com/cdc-apache-cassandra) and its ability to publish changes in C* to a backend or downstream system
-- End to end, this will deploy a GKE Cluster, DSE Cluster, & DSE Studio
+- End to end, this will deploy a GKE Cluster, DSE Cluster, & DSE Studio using the `cass-operator`
 ## Prerequsites
 - GCP account 
 - Permissions to a GCP Project where GKE clusters can be deployed
