@@ -18,7 +18,7 @@
 - Run the shell scripts in order (00-01) to deploy the k8s environment and DSE Cluster
 - Script 00 takes three arguments to deploy the GKE cluster
   - Your GCP project name (where you have permissions to deploy a GKE cluster)
-  - The name you want to give your GKE cluster (like `my-name-dse-cdc-test`)
+  - The name you want to give your GKE cluster (like `dse-dev-environment`)
   - The GCP region in which you want to deploy your cluster (e.g. `us-central1-c`)
 ## DSE Studio
 - Set up a new connection to the DSE Cluster in the Studio UI 
@@ -35,7 +35,7 @@ CASSANDRA_PASS=$(kubectl -n cass-operator get secret $CLUSTER_NAME-superuser -o 
 echo $CASSANDRA_PASS
 ```
 ## Tear Down
-- Run script 03 with the same three arguments to tear down your GKE cluster
+- Run script 02 with the same three arguments to tear down your GKE cluster
   - Your GCP project name (where you have rights to deploy a GKE cluster)
   - The name you gave your GKE cluster
   - The GCP region you deployed your cluster

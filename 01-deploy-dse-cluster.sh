@@ -9,4 +9,4 @@ CASSANDRA_PASS=$(kubectl -n cass-operator get secret dse-gke-cluster-superuser -
 # https://github.com/k8ssandra/cass-operator/blob/bd779cd4d4101e2216d0e0ed357d8662dc8ad0e8/tests/testdata/solr-dc.yaml
 # https://github.com/k8ssandra/cass-operator/blob/eb7bbb91f9bb4e93547af9821e40dfab6a024390/apis/cassandra/v1beta1/cassandradatacenter_types.go#L608-L618
 # https://github.com/k8ssandra/cass-operator/blob/eb7bbb91f9bb4e93547af9821e40dfab6a024390/apis/cassandra/v1beta1/cassandradatacenter_types.go#L737-L778
-#
+# TODO add stargate
